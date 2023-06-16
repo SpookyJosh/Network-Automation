@@ -1,0 +1,55 @@
+netmiko:
+
+
+Device types: https://ktbyers.github.io/netmiko/PLATFORMS.html
+ 
+
+Common variables:
+
+username
+
+password
+
+key_file
+
+host
+
+device_type
+
+ 
+
+python -m pip install netmiko
+
+ 
+
+connecthandler() --> creates SSH connection to remote device, store in variable. Supports values host, device_type, username, password, port, and secret
+
+ 
+
+send_command() --> sends a string value formatted command to the remote device
+
+ 
+
+send_config_set() --> sends a list of privilege exec commands to device, commands must be sent in proper order.
+
+ 
+
+is_alive() --> used to determine if the session is still open. Returns true or false
+
+ 
+
+establish_connection() --> will automatically re-connect to a device that has timed out.
+
+ 
+
+send_config_from_path(<PATH-TO-FILE) --> Sends a configuration using the supplied text file.
+
+ 
+
+open_session_log(<PATH-To-LOGFILE>) --> Starts logging the session and captures the information to the specified file.
+
+ 
+
+session_timeout = # --> sets the timeout in seconds for the session. Default is 60s.
+
+ 
